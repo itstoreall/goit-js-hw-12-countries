@@ -1,6 +1,13 @@
 import fetchCountries from "./js/fetchCountries";
+const debounce = require('lodash.debounce');
 import './styles.css';
 
-fetch("https://restcountries.eu/rest/v2/name/ukraine")
-   .then(response => response.json())
-   .then(data => console.log(data));
+document.querySelector('input').addEventListener(
+  'input',
+  debounce((e) => {
+     const searchQuery = e.target.value;
+     fetchCountries(searchQuery);
+  }, 500),
+);
+
+
