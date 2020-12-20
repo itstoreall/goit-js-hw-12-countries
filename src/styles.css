@@ -13,8 +13,39 @@ body {
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 
-  /*
-   * CSS image reference example.
-   */
   background-image: url('./images/bg-pattern.png');
+}
+
+.countries-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.contant-wrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.country-name {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.country-info__list {
+  list-style: none;
+  padding: 0;
+}
+
+.country-info__list > li:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.country-languages__list {
+  list-style: initial;
+}
+
+.countries-list {
+  flex-direction: row;
+  align-items: flex-start;
 }
